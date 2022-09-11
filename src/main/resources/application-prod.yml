@@ -1,0 +1,12 @@
+ACCESS_TOKEN_PRIVATE_KEY_PATH: "access-refresh-token-keys/access-token-private.key"
+ACCESS_TOKEN_PUBLIC_KEY_PATH: "access-refresh-token-keys/access-token-public.key"
+REFRESH_TOKEN_PRIVATE_KEY_PATH: "access-refresh-token-keys/refresh-token-private.key"
+REFRESH_TOKEN_PUBLIC_KEY_PATH: "access-refresh-token-keys/refresh-token-public.key"
+MONGODB_USERNAME: "username"
+MONGODB_PASSWORD: "password"
+MONGODB_HOST: "mongo-server"
+MONGODB_PORT: 27017
+MONGODB_DB: "database"
+MONGODB_AUTH_DB: "admin"
+MONGODB_RS: "rs1"
+MONGODB_APP: "rs1"
