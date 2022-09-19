@@ -17,9 +17,22 @@ spring:
     mongodb:
       uri: mongodb://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@${MONGODB_HOST}:${MONGODB_PORT}/?authSource=${MONGODB_AUTH_DB}&readPreference=primary&appname=${MONGODB_APP}&directConnection=true&ssl=true
       database: ${MONGODB_DB}
+      repositories:
+        type: auto
+mongock:
+  change-logs-scan-package: com.kathesama.apirestspringtemplate.config
 logging:
   level:
-    org.springframework.security: DEBUG
+    org:
+      springframework:
+        security: DEBUG
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
 jms:
   configuration:
     base-url: "/api/v1"
+jwt:
+  secret: ${JWT_SECRET}   #Clave secreta
+  expiration: ${JWT_EXPIRE}   #Base para el tiempo de expiración
