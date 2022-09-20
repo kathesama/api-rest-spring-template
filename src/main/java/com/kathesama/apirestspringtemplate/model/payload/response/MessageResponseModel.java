@@ -7,8 +7,4 @@ import lombok.*;
 @NoArgsConstructor
 public class MessageResponseModel {
     private String infoMessage;
-
-//    public MessageResponseModel(String infoMessage) {
-//        this.infoMessage = infoMessage;
-//    }
 }

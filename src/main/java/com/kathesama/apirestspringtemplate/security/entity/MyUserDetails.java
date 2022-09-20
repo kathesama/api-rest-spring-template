@@ -1,7 +1,6 @@
 package com.kathesama.apirestspringtemplate.security.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.kathesama.apirestspringtemplate.model.entity.RoleEntity;
 import com.kathesama.apirestspringtemplate.model.entity.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -41,6 +40,12 @@ public class MyUserDetails implements UserDetails {
                 .email(user.getEmail())
                 .password(user.getPassword())
                 .build();
+    }
+
+    public List<String> getAuthoritiesList() {
+        return this.getAuthorities().stream()
+                .map(GrantedAuthority::getAuthority)
+                .collect(Collectors.toList());
     }
 
     @Override

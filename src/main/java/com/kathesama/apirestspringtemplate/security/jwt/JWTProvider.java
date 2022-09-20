@@ -31,7 +31,7 @@ public class JWTProvider {
 
     public String generateToken(Authentication authentication){
         UserDetails mainUser = (UserDetails) authentication.getPrincipal();
-        logger.error(mainUser.getUsername());
+        logger.debug(mainUser.getUsername());
         return Jwts.builder().setSubject(mainUser.getUsername())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(new Date().getTime() + expiration * 1000L))
