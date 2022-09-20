@@ -1,4 +1,4 @@
-package com.kathesama.apirestspringtemplate.security;
+package com.kathesama.apirestspringtemplate.config;
 
 import com.kathesama.apirestspringtemplate.security.jwt.JWTEntryPoint;
 import com.kathesama.apirestspringtemplate.security.jwt.JWTTokenFilter;
@@ -48,7 +48,7 @@ public class WebSecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.cors().configurationSource(request -> {
                     CorsConfiguration configuration = new CorsConfiguration();
-                    configuration.setAllowedOrigins(List.of("http://localhost:8056"));
+                    configuration.setAllowedOrigins(List.of("http://localhost:3000"));
                     configuration.setAllowedMethods(List.of("HEAD", "GET", "POST", "PUT", "DELETE", "PATCH","OPTIONS"));
                     configuration.setAllowCredentials(true);
                     configuration.addExposedHeader("Message");
