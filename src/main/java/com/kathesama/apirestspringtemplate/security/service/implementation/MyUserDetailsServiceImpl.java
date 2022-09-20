@@ -1,8 +1,8 @@
 package com.kathesama.apirestspringtemplate.security.service.implementation;
 
 import com.kathesama.apirestspringtemplate.repository.UserRepository;
-import com.kathesama.apirestspringtemplate.security.entity.MyUserDetails;
 import com.kathesama.apirestspringtemplate.model.entity.UserEntity;
+import com.kathesama.apirestspringtemplate.security.entity.MyUserDetails;
 import com.kathesama.apirestspringtemplate.security.service.MyUserDetailsServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

@@ -2,7 +2,6 @@ package com.kathesama.apirestspringtemplate.service;
 
 import com.kathesama.apirestspringtemplate.exception.GenericCollectionException;
 import com.kathesama.apirestspringtemplate.model.entity.UserEntity;
-import com.kathesama.apirestspringtemplate.security.entity.MyUserDetails;
 
 import javax.validation.ConstraintViolationException;
 

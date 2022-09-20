@@ -1,15 +1,5 @@
 server:
   port: 8056
-access-token:
-  private: ${ACCESS_TOKEN_PRIVATE_KEY_PATH}
-  public: ${ACCESS_TOKEN_PUBLIC_KEY_PATH}
-refresh-token:
-  private: ${REFRESH_TOKEN_PRIVATE_KEY_PATH}
-  public: ${REFRESH_TOKEN_PUBLIC_KEY_PATH}
-accessTokenExpirationMinutes: 5
-refreshTokenExpirationDays: 30
-accessTokenSecret: 12345
-refreshTokenSecret: 54321
 spring:
   profiles:
     active: dev
@@ -19,6 +9,7 @@ spring:
       database: ${MONGODB_DB}
       repositories:
         type: auto
+      auto-index-creation: true
 mongock:
   change-logs-scan-package: com.kathesama.apirestspringtemplate.config
 logging:
@@ -36,3 +27,10 @@ jms:
 jwt:
   secret: ${JWT_SECRET}   #Clave secreta
   expiration: ${JWT_EXPIRE}   #Base para el tiempo de expiración
+kathesama:
+  app:
+    jwtCookieName: ${JWT_COOKIE_NAME}
+    jwtRefreshCookieName: ${JWT_REFRESH_COOKIE_NAME}
+    jwtSecret: ${JWT_SECRET}
+    jwtExpirationMs: ${JWT_EXPIRATION_MS}
+    jwtRefreshExpirationMs: ${JWT_REFRESH_EXPIRATION_MS}

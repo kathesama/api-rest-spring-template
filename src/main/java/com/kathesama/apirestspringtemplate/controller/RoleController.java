@@ -59,7 +59,6 @@ public class RoleController {
 
     @PutMapping("/{id}")
     public ResponseEntity<?> updateRole(@PathVariable String id, @RequestBody @Valid RoleRequestModel role) throws GenericCollectionException {
-//        try{
             RoleDTO roleDto = new RoleDTO();
             BeanUtils.copyProperties(role, roleDto);
 
@@ -67,11 +66,6 @@ public class RoleController {
             RoleResponseModel returnValue = new RoleResponseModel();
             BeanUtils.copyProperties(roleDto, returnValue);
             return new ResponseEntity<>(returnValue, HttpStatus.CREATED);
-//        }catch (ConstraintViolationException ex){
-//            return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
-//        }catch (GenericCollectionException ex){
-//            return new ResponseEntity<>(ex.getMessage(), HttpStatus.CONFLICT);
-//        }
     }
 
     @DeleteMapping("/{id}")

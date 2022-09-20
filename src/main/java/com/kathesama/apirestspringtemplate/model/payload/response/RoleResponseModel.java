@@ -1,10 +1,10 @@
 package com.kathesama.apirestspringtemplate.model.payload.response;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class RoleResponseModel {
     private String id;
     private String role;
